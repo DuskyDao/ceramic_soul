@@ -5,6 +5,7 @@
 @use "/src/sass/base/basic.scss";
 
 @use "/src/sass/blocks/header.scss";
+@use "/src/sass/blocks/footer.scss";
 
 @use "/src/sass/ui/titles.scss";
 @use "/src/sass/ui/buttons.scss";
@@ -13,3 +14,6 @@
 @use "/src/sass/blocks/activities.scss";
 @use "/src/sass/blocks/touch.scss";
 @use "/src/sass/blocks/works.scss";
+@use "/src/sass/blocks/catalog.scss";
+@use "/src/sass/blocks/blog.scss";
+@use "/src/sass/blocks/about.scss";
