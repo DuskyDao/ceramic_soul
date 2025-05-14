@@ -132,7 +132,23 @@ try {
                     .querySelector("#checkbox")
                     .parentElement.parentElement.querySelector(".checkbox-error-message"),
             }
-        );
+        )
+        // заготовка на отправку формы
+        .onSuccess((event) => {
+            const form = event.currentTarget;
+            const formData = new FormData(form);
+
+            // fetch("https://httpbin.org/post", {
+            fetch("https://jsonplaceholder.typicode.com/posts", {
+                method: "POST",
+                body: formData,
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log('Success', data);
+                    form.reset();
+                });
+        });
 } catch (e) { }
 
 try {
@@ -167,5 +183,20 @@ try {
                     .querySelector("#footer__checkbox")
                     .parentElement.parentElement.querySelector(".check-error-message"),
             }
-        );
+        )
+        .onSuccess((event) => {
+            const form = event.currentTarget;
+            const formData = new FormData(form);
+
+            // fetch("https://httpbin.org/post", {
+            fetch("https://jsonplaceholder.typicode.com/posts", {
+                method: "POST",
+                body: formData,
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log('Success', data);
+                    form.reset();
+                });
+        });
 } catch (e) { }
